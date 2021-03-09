@@ -1,0 +1,39 @@
+html {
+    font-size: 10px;
+  }
+
+  td {
+    font-size: 1.6em;
+    padding-right: 2em;
+  }
+
+  th {
+    font-size: 2.5em;
+    text-align: start;
+  }
+
+  tr{
+      display: block;
+  }
+
+  .caption {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    text-align: start;
+    display: block;
+  }
+
+  .block {
+    display: block;
+  }
+
+  .inline {
+    display: flex;
+    font-size: 10px;
+    font-weight: normal;
+  }
+
+  span {
+    font-weight: bold;
+  }

@@ -1,0 +1,49 @@
+html {
+  font-size: 10px;
+}
+
+td {
+  font-size: 1.6em;
+  margin-right: 2em;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+th {
+  font-size: 2.5em;
+  text-align: start;
+  padding-bottom:  20px;
+  padding-left: 20px;
+}
+
+tr{
+  display: block;
+}
+.caption {
+  font-size: 3em;
+  font-weight: bold;
+  padding: 20px;
+  color: black;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: flex;
+  font-size: 10px;
+  font-weight: normal;
+}
+
+span {
+  font-weight: bold;
+}
+
+.msgtd{
+  margin-bottom: 1em;
+}
+.box{
+  display: block;
+}
+

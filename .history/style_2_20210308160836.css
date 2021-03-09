@@ -1,0 +1,48 @@
+html {
+    font-size: 10px;
+  }
+
+  td {
+    font-size: 1.6em;
+    margin-right: 2em;
+  }
+
+  th {
+    font-size: 2.5em;
+    text-align: start;
+    margin-bottom: 1em;
+    display: block;
+  }
+
+  tr{
+      display: block;
+  }
+
+  /* .caption {
+    font-size: 3.5em;
+    font-weight: bold;
+    background: lightskyblue;
+  } */
+
+  .block {
+    display: block;
+  }
+
+  .inline {
+    display: flex;
+    font-size: 10px;
+    font-weight: normal;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  .msgtd{
+    margin-bottom: 1em;
+  }
+
+  table{
+      table-layout: fixed;
+      float: left;
+  }
