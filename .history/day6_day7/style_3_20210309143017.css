@@ -1,0 +1,62 @@
+html {
+    font-size: 10px;
+  }
+
+div{
+  border: 1px solid black;
+}
+
+  .td {
+    font-size: 1.6em;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+
+  .th {
+    font-size: 1.5em;
+    text-align: center;
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: lightgray;
+  }
+
+  .caption {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    background: gray;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+  }
+
+ .part{
+   display: block;
+ }
+
+  .part_left{
+    display: inline-block;
+  }
+
+  .part_right{
+    display: inline-block;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  
+
+  .box{
+      display: block;
+      height: 800px;
+  }
+  
+  .block{
+    display: block;
+  }

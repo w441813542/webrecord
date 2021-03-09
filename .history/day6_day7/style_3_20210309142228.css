@@ -1,0 +1,61 @@
+html {
+    font-size: 10px;
+  }
+
+  .td {
+    font-size: 1.6em;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    display: inline-block;
+  }
+
+  .th {
+    font-size: 1.5em;
+    text-align: center;
+    display: block;
+    padding: 20px;
+    background: lightgray;
+  }
+
+  .caption {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    background: gray;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+  }
+
+ /* .part{
+   display: block;
+ } */
+
+  .part_left{
+    display: inline-block;
+    height: 100px;
+  }
+
+  .part_right{
+    display: inline-block;
+    flex: 1;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  .msgtd{
+    margin-bottom: 1em;
+  }
+  
+
+  .box{
+      display: block;
+      height: 800px;
+  }
+  
+  .block{
+    display: block;
+  }

@@ -1,0 +1,64 @@
+html {
+    font-size: 10px;
+  }
+
+  div{
+    border: 1px solid gray;
+  }
+
+  .td {
+    font-size: 1.6em;
+    display: inline-block;
+  }
+
+  .th {
+    font-size: 1.5em;
+    display: inline-block;
+  }
+
+  .caption {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    background: gray;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+  }
+
+ .part{
+   display: block;
+   border: 1px solid lightgray;
+ }
+
+  .part_left{
+    display: inline-block;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #aaa;
+  }
+
+  .part_right{
+    display: inline-block;
+    height: 150px;
+    padding: 20px;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  .box{
+      display: block;
+  }
+
+  .flex{
+    display: flex;
+  }
+
+  .block{
+    display: block;
+  }

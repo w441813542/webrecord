@@ -1,0 +1,60 @@
+html {
+    font-size: 10px;
+  }
+
+  td {
+    font-size: 1.6em;
+    margin-right: 2em;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+
+  th {
+    font-size: 2.5em;
+    text-align: start;
+    display: inline;
+    padding-bottom:  20px;
+    padding-left: 20px;
+  }
+
+  .caption {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    background: gray;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+  }
+
+  .block {
+    display: block;
+  }
+
+  .part{
+    display: flex;
+  }
+
+  .part_left{
+    width: 100px;
+  }
+
+  .part_right{
+    flex: 1;
+  }
+  
+  span {
+    font-weight: bold;
+  }
+
+  .msgtd{
+    margin-bottom: 1em;
+  }
+  
+
+  .box{
+      display: block;
+      height: 800px;
+  }
+  

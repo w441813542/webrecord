@@ -1,0 +1,66 @@
+html {
+    font-size: 10px;
+  }
+
+  .td {
+    font-size: 1.6em;
+    margin-right: 2em;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    display: inline-block;
+  }
+
+  .th {
+    font-size: 1.5em;
+    text-align: center;
+    display: block;
+    width: 100px;
+    height: 100%;
+    padding-left: 20px;
+  }
+
+  .caption {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    background: gray;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+  }
+ table {
+   display: block;
+ }
+
+ .part{
+   display: block;
+ }
+
+  .part_left{
+    display: inline-block;
+  }
+
+  .part_right{
+    display: inline-block;
+    flex: 1;
+    height: 100px;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  .msgtd{
+    margin-bottom: 1em;
+  }
+  
+
+  .box{
+      display: block;
+      height: 800px;
+  }
+  
+  .block{
+    display: block;
+  }

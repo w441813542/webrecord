@@ -1,0 +1,66 @@
+html {
+    font-size: 10px;
+  }
+/* 
+  div{
+    border: 1px solid gray;
+  } */
+
+  .td {
+    font-size: 1.6em;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .th {
+    font-size: 1.5em;
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+    height: 155px;
+  }
+
+  .caption {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    background: gray;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+  }
+
+ .part{
+   display: block;
+   border: 1px solid lightgray;
+ }
+
+  .part_left{
+    display: inline-block;
+    height: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: lightgray;
+  }
+
+  .part_right{
+    display: inline;
+    height: 150px;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  .box{
+      display: block;
+  }
+
+  .flex{
+    display: flex;
+  }
+
+  .block{
+    display: block;
+  }
