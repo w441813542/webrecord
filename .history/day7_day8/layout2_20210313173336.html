@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>两栏布局</title>
+    <style>
+        #left {
+            margin-left: -100%;
+            left: -120px;
+            overflow: hidden;
+            height: 100%;
+            width: 120px;
+            background-color: chocolate;
+        }
+
+        #right {
+            padding: 120px0;
+            float: left;
+            width: 70%;
+            height: 100%;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="right">右边根据浏览器宽度自适应</div>
+    <div id="left">左边固定宽度</div>
+</body>
+
+</html>

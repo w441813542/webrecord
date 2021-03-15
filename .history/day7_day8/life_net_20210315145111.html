@@ -1,0 +1,147 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页</title>
+    <style>
+        * {
+            box-sizing: border;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .header {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(51, 51, 51);
+            color: white;
+            text-align: center;
+
+        }
+
+        #banner {
+            width: 100%;
+            height: 250px;
+            background-color: rgb(101, 185, 101);
+            color: white;
+            text-align: center;
+        }
+
+        .ul {
+            position: relative;
+            display: flex;
+            float: right;
+            right: 0;
+            margin-right: 10px;
+            margin-top: 170px;
+        }
+
+        .li {
+            color: white;
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            list-style-type: none;
+            border: 1px solid white;
+        }
+
+        #current_banner_tab {
+            color: white;
+            height: 50px;
+            width: 40px;
+            margin-top: -10px;
+            line-height: 50px;
+            list-style-type: none;
+            border: 1px solid white;
+        }
+
+        #main_content_container {
+            position: relative;
+            clear: both;
+        }
+
+        #main_content_tab {
+            display: flex;
+            margin-left: 100px;
+            padding-left: 0;
+            margin-top: 0;
+        }
+
+        .tab {
+            padding: 10px;
+            margin: 5px;
+            background-color: rgb(192, 192, 192);
+        }
+
+        p {
+            margin: 0;
+        }
+
+        article {
+            position: absolute;
+            /* top: 0;
+            left: 0; */
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(51, 51, 51);
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        #main_content_contianer article {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 352px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header class="header">
+            <p>我是头部</p>
+        </header>
+        <div id="banner">
+            <p>我是banner</p>
+            <div class="ul">
+                <div class="li">1</div>
+                <div class="li">2</div>
+                <div class="li">3</div>
+                <div class="li" id="current_banner_tab">4</div>
+                <div class="li">5</div>
+            </div>
+        </div>
+        <div id="center_div">
+            <div id="main_content">
+                <div id="main_content_tab">
+                    <div class="tab" class="active">HOME</div>
+                    <div class="tab">PROFILE</div>
+                    <div class="tab">ABOUT</div>
+                </div>
+                <div id="main_content_container">
+                    <article class="content">内容1</article>
+                    <article class="content">内容1</article>
+                    <article class="content">内容1</article>
+                    <article class="content">内容1</article>
+                    <article class="content">内容1</article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">我是尾部</footer>
+    </div>
+</body>
+
+</html>

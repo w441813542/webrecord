@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页</title>
+    <style>
+       .header{
+           width: 100%;
+           height: 100px;
+           background-color: rgb(51, 51, 51);
+       }
+       ul{
+           position:absolute;
+           display: flex;
+           right:0;
+       }
+
+       li{
+           color: white;
+           position: relative;
+           list-style-type: none;
+           padding: 10px;
+           border: 1px solid white;
+       }
+    
+    </style>
+</head>
+<body>
+    <div id="containen">
+       <header class="header">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li id="current_banner_tab">4</li>
+            <li>5</li>
+        </ul>
+       </header>
+       <div id="center_div">
+           <div id="main_content">
+               <div id="main_content_tab">
+                   <div class="tab">HOME</div>
+                   <div class="tab">PROFILE</div>
+                   <div class="tab">ABOUT</div>
+               </div>
+               <div id="main_content_text">
+                    <div id="content1">内容1</div>
+                    <div id="content2">内容1</div>
+                    <div id="content3">内容1</div>
+                    <div id="content4">内容1</div>
+                    <div id="content5">内容1</div>
+               </div>
+             </div>
+           </div>
+       </div>
+       <footer class="footer">我是尾部</footer>
+    </div>
+</body>
+</html>
