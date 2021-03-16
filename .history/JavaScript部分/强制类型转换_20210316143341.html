@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+      /**
+       * 强制类型转换
+       *    - 指将一个数据类型转换成其它的数据类型 
+       *    
+       * 
+       *  方式一：调用被转换数据类型的toString()方法
+       *          - null和Undefined不能转换类型
+       *  方式二：调用String()函数
+       *          - null和Undefined可以转换类型
+       */
+      var a = 123;
+      console.log(typeof a);
+      console.log(typeof a.toString());
+
+      a = 123;
+      console.log(typeof String(a));
+
+      a = true;
+      console.log(String(a));
+      a = undefined;
+      console.log(String(a));
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代码编写位置</title>
+    <!--可以将js代码编写到外部js文件中，然后通过script标签引入
+        写到外部文件中可以在不同的页面中同时引入，也可以利用到浏览器的缓存机制
+        推荐使用的方式-->
+    <script type="text/javascript" src="02Js.js">
+        
+    </script>
+    <script>alert("我是内部文件代码");</script>
+</head>
+
+<body>
+    <!--js代码写在属性里面不推荐，代码多了你就乱了-->
+    <!--
+        可以将代码编写到标签的onClick属性中
+    -->
+    <button onclick="alert('给给给~');">点我一下</button>
+
+    <!--
+        可以将js代码写在超链接的href属性中，这样当点击超链接时候，会执行js代码
+    -->
+    <a href="javascript:alert('大爷来玩');">你也点我下</a>
+    <!--可以引入外部JS文件的代码-->
+    <a href="">外部JS点击呀</a>
+</body>
+
+</html>
