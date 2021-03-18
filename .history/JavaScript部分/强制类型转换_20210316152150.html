@@ -41,6 +41,10 @@
        *         4.布尔值如果是true，则转换为1，false转换为0
        *         5.Null转数字为0
        *         6.Undefined转数字为NaN
+       * 
+       * 方式二：专门用来对付字符串
+       *      - parseInt() 把一个字符串转换成一个整数
+       *      - parseFloat() 把一个字符串转换成一个浮点型数字
        */
 
        var a = "123";
@@ -49,6 +53,43 @@
        console.log(typeof Number(a));
        a = "    "
        console.log(Number(a));
+
+       /*方式二 
+          1.parseInt可以将一个字符串中的有效的证书内容取出来
+          2.
+       */
+       a = "123a456px";
+    
+       console.log(typeof a);
+       console.log(a);
+
+       console.log(parseInt(a))
+
+       a = "123.456px"
+       console.log(parseFloat(a));
+
+
+       //如果对非String使用parseInt()或者parseFloat() 他会先将其转换为String，然后在操作
+
+       a = true;
+       console.log(parseInt(a));
+
+       /*
+         在js 中如果需要表示16进制数字，则以0x开头
+         如果需要表示8进制的数字，则需要以0开头
+         如果需要表示2进制的数字，则需要以0b开头，但是不是所有浏览器都支持
+       */
+
+       a = 0x10
+       console.log(a);
+
+       a=010;
+       console.log(a);
+
+       a = 0b10;
+       console.log(a);
+
+       //像"070"字符串转Number有些浏览器会当成8进制解析，有些会当成10进制解析。
     </script>
 </head>
 <body>

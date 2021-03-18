@@ -1,0 +1,158 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        /**
+         * 流程控制语句
+         *   - JS中的程序是从上到下一行一行执行。
+         *   - 通过流程控制语句可以控制程序执行流程
+         *          使程序可以根据一定的条件来选择执行
+         *   - 语句的分类：
+         *      1.条件判断语句
+         *      2.条件分支语句
+         *      3.循环语句
+         *   
+         * 
+         * 
+         *   条件判断语句：
+         *     - 使用条件判断语句可以在执行某个语句之前进行判断。
+         *         如果条件成立才会执行语句，条件不成立则语句不成立
+         *     - if语句
+         *       - 语法一：
+         *          if(条件表达式) {
+         *             语句...
+         * }
+         *             if语句在执行时，会先对条件表达式进行求职判断，
+         *             如果条件表达式的值为true，则执行if后的语句，
+         *             如果条件表达式的值为false，则不会执行if后的语句。
+         * 
+         *       - 语法二：
+         *          if(条件表达式){
+         *            语句...
+         *  }else{
+         *            语句2... 
+         *  }
+         *       - 语法三：
+         *          if(条件表达式){
+         *           语句1...
+         *  }else if(条件表达式)
+         * {
+         *           语句2...
+         *  }else if(条件表达式)
+         * {
+         *           语句3...
+         * }else{
+         *           语句4... 
+         * }
+         * 
+         * 条件都不满足，则执行else。
+         * 该语句只会有一个代码块被执行    
+         * 
+         */
+        // if (false) alert("true");
+
+        // var a = 10;
+        // if (a > 10) {
+        //     alert("a>10!");
+        // }
+
+
+        // var age = 50;
+        // if (age >= 60) {
+        //     alert("退休啦");
+        // } else {
+        //     alert("没退休");
+        // }
+
+
+        /**
+         * 用户可以在文本框中输入一段内容
+         */
+        // var score = prompt("请输入小明成绩：");
+
+        // if (score == 100) {
+        //     alert("奖励宝马");
+        // } else if (score >= 80 && score < 100) {
+        //     alert("奖励手机");
+        // } else if (score >= 60 && score < 80) {
+        //     alert("奖励飞机模型")
+        // }
+        // else {
+        //     alert("啥都没有");
+        // }
+
+
+        // var height = prompt("请输入你的身高!(cm)");
+        // var money = prompt("请输入你的财富!(kw)");
+        // var hanson = prompt("请问你有多帅!(0-1000)");
+
+        // if(height > 180 && money > 1000 && hanson>500)
+        // {
+        //     alert("一定要嫁");
+        // }else if(height > 180 || money > 1000 || hanson >500)
+        // {
+        //     alert("比上不足比下有余");
+        // }else{
+        //     alert("no way");
+        // }
+
+
+        var num1 = prompt("输入num1");
+        var num2 = prompt("输入num2");
+        var num3 = prompt("输入num3");
+
+        var min = Number.MAX_VALUE;
+        var max = -Number.MAX_VALUE;
+        var middle = 0;
+
+        if (min > num1) {
+            min = num1;
+            num1 = 0;
+        } else if (min > num2) {
+            min = num2;
+            num2 = 0;
+        }
+        else {
+            min = num3;
+            num3 = 0;
+        }
+
+
+        if (max < num1) {
+            max = num1;
+            num1 = 0;
+        }
+        else if (max < num2) {
+            max = num2;
+            num2 = 0;
+        }
+        else {
+            max = num3;
+            num3 = 0;
+        }
+
+        if (num1 != 0) {
+            middle == num1;
+        }
+        else if (num2 != 0) {
+            middle = num2;
+        }
+        else {
+            middle = num3;
+        }
+
+
+        alert("从小到大排列：" + max + "," + middle + "," + min);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

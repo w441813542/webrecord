@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+      /**
+       * 强制类型转换
+       *    - 指将一个数据类型转换成其它的数据类型 
+       *    
+       * 
+       *  方式一：调用被转换数据类型的toString()方法
+       *          - null和Undefined不能转换类型
+       *  方式二：调用String()函数
+       *          - null和Undefined可以转换类型
+       */
+
+    //   var a = 123;
+    //   console.log(typeof a);
+    //   console.log(typeof a.toString());
+
+    //   a = 123;
+    //   console.log(typeof String(a));
+
+    //   a = true;
+    //   console.log(String(a));
+    //   a = undefined;
+    //   console.log(String(a));
+
+
+
+      /**
+       * 将其它的数据类型转换为Number
+       * 
+       * 方式一：Number()函数 
+       *      - 字符串 --> 数字 
+       *         1.如果是纯数字字符串，则直接将其转换为数字
+       *         2.如果是非数字的内容，则转变为NaN
+       *         3.如果是空串或者全是空格的字符串，则转换为0
+       *         4.布尔值如果是true，则转换为1，false转换为0
+       *         5.Null转数字为0
+       *         6.Undefined转数字为NaN
+       * 
+       * 方式二：专门用来对付字符串
+       *      - parseInt() 把一个字符串转换成一个整数
+       *      - parseFloat() 把一个字符串转换成一个浮点型数字
+       */
+
+       var a = "123";
+       console.log(typeof a);
+       console.log(a);
+       console.log(typeof Number(a));
+       a = "    "
+       console.log(Number(a));
+
+       //方式二
+       a = "123px";
+    
+       console.log(typeof a);
+       console.log(a);
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

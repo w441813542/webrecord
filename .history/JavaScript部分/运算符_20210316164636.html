@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    
+      /**
+       * 运算符也叫操作符
+       *  通过运算符可以对一个或多个值进行运算
+       *  比如：typeof就是运算符，可以来获得一个值得类型（他是字符串）
+       * 
+       * 
+       * 算数运算符：
+       *  + 
+       *  - 
+       *  * 
+       *  /
+       *  %
+       *   - 当非Number类型的值进行运算时候，都会将其转换为Number后在进行运算。
+       *   - 任何值和NaN运算都是NaN
+       *   - 两个字符串相加，则会进行拼接字符串
+       *   - 任何值和字符串进行运算时候，都会将其转换为String后进行拼串。
+       */ 
+
+        var a = 1;
+
+        console.log(a+1);
+
+        console.log("你好"+"世界");
+
+        console.log(a+NaN);
+        console.log(a+null);
+        console.log(a+true);
+        console.log(a+false);
+        console.log(a+"hello");
+
+        //或者可以直接用+""转换成字符串
+        console.log(typeof (a+""));
+
+
+        /**
+         * 减法：
+         *  - 所有不为Number类型的减法，都先进行转换Number的操作，再进行运算
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
