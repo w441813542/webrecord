@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+         * 定义一个函数判断一个数字是否是偶数，如果是返回true,否则返回false
+         * 
+         * 
+         * 定义一个函数，可以根据半径计算一个圆的面积并返回计算结果。
+         */
+
+        // function isOu(num) {
+        //     if (num % 2 == 0) {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
+
+        // if(isOu(2)){
+        //     alert("偶数！");
+        // }else{
+        //     alert("不是偶数！");
+        // }
+
+
+
+        // function getOvalMianji(r) {
+        //     return Math.PI * r * r;
+        // }
+
+        // alert(getOvalMianji(1));
+
+
+
+
+        /**
+         * 创建一个函数，可以控制控制台中输出一个人的信息。
+         * 实参可以使任意的数据类型，也可以是一个对象
+         * 当我们参数过多时候，可以将参数封装到一个对象中，然后通过对象传递
+         */
+        var obj = {
+            name: "wzj",
+            age: 18,
+            gender: "男",
+            address: "大街"
+        }
+
+        function sayHello(o) {
+            console.log("我是：" + o.name + "，" + o.age + "岁，" + o.gender + ",我住在" + o.address);
+        }
+
+        sayHello(obj);
+
+
+        /**
+         * 实参也可以是一个函数（函数也是一个对象）
+         */
+        function fun(a) {
+            console.log("a=" + a);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

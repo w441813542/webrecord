@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //创建一个对象
+        var obj = {
+            name: "孙悟空",
+            gender: "男",
+            age: 18,
+            sayName: function () {
+                alert(this, name)
+            }
+        }
+
+        var obj = createPerson("猪八戒","boy",22,function() {
+            console.log("哈哈哈");
+        });
+
+        /**
+         * 使用工厂方法来创建对象
+         */
+
+        function createPerson(name, gender, age, sayName) {
+            var obj = {
+                name: this.name,
+                gender: this.gender,
+                age: this.age,
+                sayName: this.sayNameS,
+            }
+            return obj;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

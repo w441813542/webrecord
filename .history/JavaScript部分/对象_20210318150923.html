@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /**
+         * 
+         * 对象属于一种复合的数据类型，在对象中可以保存多个不同类型的属性。
+         * 
+         * 对象分类：
+         *   1.内建对象
+         *     - 由ES标准中定义的对象，在任何的ES的视线中都可以使用
+         *     - 比如，Math String Number Boolean Function Object...
+         * 
+         *   2.宿主对象
+         *     - 由JS的运行环境提供的对象，目前来讲主要由浏览器提供的对象
+         *     - 比如 BOM DOM
+         *   3.自建对象
+         *     - 由开发人员自己创建的对象。
+         * 
+         */
+
+        //创建对象
+        /**
+         * 使用new 关键字调用的函数，是构造函数constructor
+         *     构造函数时专门创建对象的函数
+         */
+        var obj = new Object();
+
+
+        /**
+         * 在对象中保存的值成为属性
+         * 向对象中添加属性
+         *    语法: 对象.属性名 = 属性值; 跟java不同，可以直接先赋值。
+         * 
+         * 
+         * 如果读取对象中没有的属性，不会报错而是会返回undefined
+         */
+
+        obj.name = "hehe";
+        obj.wula = "wula";
+        obj.gender = "男";
+        obj.age = "18";
+
+        console.log(obj.name);
+        /*
+        修改对象的属性值
+          语法：对象.属性名 = 属性值;
+        */
+       obj.name = "wzj";
+       console.log(obj.name);
+
+       /**
+        * 删除对象属性值
+        *  语法：delete 对象.属性名
+        */ 
+
+        delete obj.name;
+        console.log(obj.name);
+
+        /**
+         * 如果要使用特殊的属性名，不能采用.的方式来操作
+         *   需要使用另一种方式：
+         *      语法：对象["属性名"] = 属性名;
+         *      读取时候也需要采用这种方式。
+         *      在[]中可以直接传第一个变量，这样变量值是多少就会读去哪个属性
+         */ 
+        obj["123"] = 789;
+        console.log(obj["123"]);
+
+        /**
+         * 可以套娃
+         */ 
+         var obj2 = new Object();
+         obj2.test = "猪八戒";
+         obj.containObj = obj2;
+         console.log(obj.containObj.test);
+
+
+         /**
+          * in 运算符
+          *   - 通过该运算符可以检查一个对象中是否含有指定的属性
+          *        如果有则返回true 没有则返回false
+          */ 
+         //检查obj忠是否有test2属性
+         console.log("123" in obj);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

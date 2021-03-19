@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+        *  函数作用域
+             - 调用函数时创建函数作用域，函数执行完毕后，函数作用域销毁
+             - 每调用一次函数就会创建一次新的函数作用域，他们之间是相互独立的。
+             - 在函数作用域中可以访问到全局作用域的变量，全局作用域中无法访问到函数作用域的变量
+             - 当在函数作用域操作一个变量时，它会先在自身作用域中寻找，如果有直接使用，
+                 没有则向上一级作用域中寻找，直到找到全局作用域，仍然没有则报错
+             -访问全局变量可以调用window.变量
+        */
+
+
+        /**
+         * 函数内部也有提前声明的特性。
+         *   var 提前声明
+         *   function 提前声明
+         *   具体看@link{34变量的提前声明.html}
+         */ 
+        function fun() {
+
+            console.log("a = " + a);
+
+            var a = 10;
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
