@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+         * 创建一个正则表达式检查一个字符串中是否有aaa
+         */ 
+
+         /**
+          * 量词
+          *   - 通过量词可以设置一个内容出现的次数{n}
+          *   - 量词只对它前面的内容起作用
+          */ 
+         var reg = /a{3}/;
+         console.log(reg.test("aasdf"));
+
+         reg = /a{1,3}c/;
+         console.log(reg.test("bbbbc"));
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

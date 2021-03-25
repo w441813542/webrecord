@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       /**
+        * 包装类:
+        *   在JS中为我们提供了三个包装类，通过这三个包装类可以将基本数据类型的数据转化为对象。
+        * 
+        *   String()
+        *     - 将基本数据类型转为Stirng对象
+        *   Number()
+        *     - 可以将基本数据类型的数字转换为Number对象
+        *   Boolean()
+        *     - 可以将基本数据类型的布尔值转换为Boolean对象
+        */ 
+
+        // var a = 123;
+        var num = new Number(123);
+        var str = new String("hello");
+        var bool = new Boolean(true);
+
+        //添加一个属性
+        num.a = "abc";
+
+        console.log(num.a);
+        console.log(typeof a);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

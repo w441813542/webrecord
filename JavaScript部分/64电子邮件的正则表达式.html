@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /**
+         * 电子邮件：
+         *    w441813542@qq.com
+         *  规则：
+         *    1.任意字母数字下划线.任意字母数字下滑线（0个或1一个）@任意字母数字.任意字母（2-5位）
+         */
+        var reg = /^\w{3,}(\.\w+)* @ [A-z\[0-9] (\.[A-z]{2,5}){1,2}$/;
+        console.log(reg.test("441813542@qq.com"));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

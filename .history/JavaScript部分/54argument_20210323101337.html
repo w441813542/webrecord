@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+     /**
+      * 再调用函数时，浏览器每次都会传递进两个隐含的参数，
+      *   1.函数的上下文this
+      *   2.封装实参的对象argument
+      *        - arguments 是一个“类数组对象”
+      *        - 在调用函数式，我们所传递的参数也会在arguments中保存
+      */ 
+
+
+      function fun() {
+          console.log(arguments.length);
+      }
+
+       fun(1,2,3)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

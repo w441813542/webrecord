@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+         * 创建一个正则表达式检查一个字符串中是否有aaa
+         */ 
+
+         /**
+          * 量词
+          *   - 通过量词可以设置一个内容出现的次数{n}
+          *   - 量词只对它前面的内容起作用
+          *   - {n} 正好出现n次
+          *   - {m,n} 出现m - n 次
+          *   - {m,} 出现m次以上
+          *   - + 至少一个，相当于{1,}
+          *   - ? 0到1个，相当于{0,1}
+          *   - ^ 表示开头
+          *   - $ 表示结尾
+          */ 
+         var reg = /a{3}/;
+         console.log(reg.test("aasdf"));
+
+         //1-3次出现b，后面接个c
+         reg = /b{1,3}c/;
+         console.log(reg.test("bbbc"));
+         //3次以上
+         reg = /b{3,}c/;
+         console.log(reg.test("bbbbbbbc"));
+         //+:至少一个
+         reg = /ab+c/;
+         console.log(reg.test("abababc"));
+         //?:0到1个
+         reg = /ab?c/;
+         console.log("/(ab?)c/:"+reg.test("ac"));
+         //^:以a开头
+         reg = /^ac/;
+         console.log(reg.test("ac"));
+         console.log(reg.test("ac"));
+         //$:以a结尾
+         reg = /a$c/;
+         console.log(reg.test("csfjkla"));
+
+         /**
+          * 创建一个正则表达式，用来检查一个字符串是否是一个合法的手机号
+          * 手机号规则：
+          *   15088138580
+          *   1.第一位：1
+          *   2.第二位：3-9
+          *   3.11位数字
+          */
+         reg = /^1[3-9][0-9]{9}$/; 
+
+         console.log("手机号："+reg.test("15088138580"));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

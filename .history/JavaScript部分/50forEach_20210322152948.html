@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+         * 一般我们都是使用for循环来遍历数组，
+         *   JS中还为我们提供一个方法，用来遍历数组
+         * forEach()
+         */
+
+        //创建一个数组
+        var arr = ["孙悟空", "猪八戒", "玉皇大帝", "皇母娘娘", "黄蜂大王", "白龙马"];
+
+
+        /**
+         * forEach()方法需要一个函数作为参数
+         *   - 像这种函数，由我们创建但是不由我们调用的，我们称之为回调函数
+         */
+        arr.forEach(function() {
+            console.log(this);
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //创建一个数组
+        var arr = new Array();
+        //使用字面量来创建数组
+        //语法：[]
+        var arr1 = [];
+
+        console.log(typeof arr1);
+
+        //创建一个数组只有一个元素10
+        var arry2 = [2];
+
+        //创建一个长度为10的数组
+        var arry3 = new Array(10);
+        //数组中的元素可以使任意的元素类型f
+        arr = ["hello", 1, true, null, undefined];
+        //也可以保存对象
+        var obj = { name: "sunwukong" }
+
+        arr[arr.length] = obj;
+        arr = [{ name: "wzj" }, { name: "dmj" }]
+
+        //也可以是一个函数
+        arr = [function () {alert("方法："+1);},function () {alert("方法："+2);},function () {alert("方法："+3);}]
+        arr[0];
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

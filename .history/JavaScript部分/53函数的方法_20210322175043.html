@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun() {
+            alert(this);
+        }
+
+        var obj = { name: "obj1" };
+        var obj2 = { name: "obj2" };
+
+        /**
+         * call()和apply()
+         *  - 这两个方法都是函数对象的方法，需要通过函数对象来调用。
+         *  - 当对函数调用call()和apply()都会调用函数执行
+         *  - 在调用call和apply()可以将一个对象指定为第一个参数
+         */
+
+        fun();
+        fun.call();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

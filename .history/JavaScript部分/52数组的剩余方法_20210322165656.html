@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    /**
+     * concat()可以链接两个或多个数组，并将新的数组返回
+     */
+    
+     var arr = ["arr1","arr2","arr3","arr4","arr5"];
+     var arrb =  ["arrb1","arrb2","arrb3","arrb4","arrb5"];
+     var arrc =  ["arrc1","arrc2","atrc3","arrc4","arrc5"];
+
+     
+     var result = arr.concat(arrb);
+     console.log(result);
+     //concat可以链接两个或多个数组，并且不对原数组产生影响
+     console.log(arr.concat(arrb,arrc));
+     /**
+      * join()
+      *   - 该方法可以将数组转换为一个字符串
+      *   - 该方法不会对原数组产生影响，而是将转换之后的字符串作为结果返回
+      *   - 在join()可以制定一个字符串作为参数，这个字符串将会成为数组中元素的连接符
+      */ 
+      console.log(arr.join("淦"));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

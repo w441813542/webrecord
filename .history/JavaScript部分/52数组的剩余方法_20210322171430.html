@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+         * concat()可以链接两个或多个数组，并将新的数组返回
+         */
+
+        var arr = ["arr1", "arr2", "arr3", "arr4", "arr5"];
+        var arrb = ["arrb1", "arrb2", "arrb3", "arrb4", "arrb5"];
+        var arrc = ["arrc1", "arrc2", "atrc3", "arrc4", "arrc5"];
+
+
+        var result = arr.concat(arrb);
+        console.log(result);
+        //concat可以链接两个或多个数组，并且不对原数组产生影响
+        console.log(arr.concat(arrb, arrc));
+        /**
+         * join()
+         *   - 该方法可以将数组转换为一个字符串
+         *   - 该方法不会对原数组产生影响，而是将转换之后的字符串作为结果返回
+         *   - 在join()可以制定一个字符串作为参数，这个字符串将会成为数组中元素的连接符，默认情况下使用","
+         */
+        console.log(arr.join("-"));
+        /**
+         * reverse()
+         *  - 该方法用来反转数组（次序颠倒）
+         */
+        console.log(arr.reverse());
+
+        /**
+         * sort()
+         *  - 对数组进行排序
+         *  - 也会影响数组，默认按照Unicode编码进行排序
+         *  - 即使对于纯数字的数组，使用sort()排序时候，也会按照Unicode编码进行排序
+         *      所以对数字进行明排序时候，可能会得到错误的结果
+         *      我们可以自己来制定排序的规则
+         *      我们可以在sort()中添加一个回调函数，来制定排序规则
+         *         回调函数中需要定义两个形参
+         *         浏览器将会分别是用数组中的元素作为实参去调用回调函数
+         *         使用那个元素不确定，但是肯定是在数组1一定在2前面
+         */
+        var nums = [2, 3, 6, 7, 4, 11];
+        console.log(nums.sort());
+        console.log(nums.sort(function (a, b) {
+            return a > b ? -1 : 1;
+        }));
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

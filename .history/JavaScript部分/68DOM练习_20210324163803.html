@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #outter {
+            width: 500px;
+            margin: 50px auto;
+            padding: 10px;
+            background-color: greenyellow;
+            text-align: center;
+        }
+
+        img {
+            width: 500px;
+        }
+    </style>
+    <script>
+        //点击按钮切换图片
+        window.onload = function () {
+            var prev = document.getElementById("prev");
+            var next = document.getElementById("next");
+            var picArr = ["img/0.jpg", "img/1.jpg", "img/2.jpg", "img/3.jpg"];
+            var index = 0;
+            prev.onclick = function () {
+                //图片
+                var img = document.getElementsByTagName("img")[0];
+                if (index > 0) {
+                    index--;
+                } else {
+                    index = 3;
+                }
+                img.src = picArr[index];
+                console.log(img.src);
+            }
+            next.onclick = function () {
+                //图片
+                var img = document.getElementsByTagName("img")[0];
+                if (index < 4) {
+                    index++;
+                } else {
+                    index = 0;
+                }
+                img.src = picArr[index];
+                console.log(img.src);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="outter">
+        <img src="img/0.jpg" alt="冰棍" />
+        <button id="prev">上一条</button>
+        <button id="next">下一条</button>
+    </div>
+</body>
+
+</html>

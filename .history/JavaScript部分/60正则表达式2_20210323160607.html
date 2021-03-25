@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+         * 正则表达式2：
+         *  使用字面量来创建正则表达式
+         *    语法： var 变量 = /正则表达式/匹配模式
+         *  使用字面量的方式创建更加简单
+         *    使用构造函数创建更加灵活
+         */ 
+        // var reg = new RegExp("a","i");
+        var reg = /a/i;
+
+        var str = "asbcdef";
+
+        console.log(reg.test(str));
+
+        //创建一个正则表达式，检查一个字符串是否有a或b
+
+        reg = /a|b|c/;
+
+        console.log(reg.test(str));
+
+        //创建一个正则表达式是否有字母(中括号里面内容也是或的关系，相当于/a|b|c|d....|z/)
+
+        reg = /[ab]/
+
+        console.log(reg.test(""));
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

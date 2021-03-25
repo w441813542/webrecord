@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /**
+         * 检查一个字符串中是否含有.
+         * 需要用到转义字符\来转义
+         */
+        var reg = /\./;
+        console.log(reg.test("123"));
+
+        //判断有没有斜杠
+        reg = /\\/;
+        console.log(reg.test("123\\"));
+
+        //构造函数里面因为是字符串所以要写两个斜杠才能转义
+        reg = new RegExp("\\.");
+        console.log(reg.test("haha.ha"));
+
+        /**
+         * /w
+         *  - 任意字母和数字
+         * /W
+         *  - 除了字母数字下划线
+         * /d
+         *  - 任意数字
+         * /D
+         *  - 除了数字
+         * /s
+         *  - 空格
+         * /S
+         *  - 除了空格
+         * /b
+         *  - 单词边界
+         *      每个单词之间的空格
+         * /B
+         *  - 除了单词边界
+         */
+
+        reg = /\w/;
+        console.log("\\w：" + reg.test("123"));
+        console.log("\\w：" + reg.test("我"));
+
+        reg = /\W/;
+        console.log("\\W：" + reg.test("123"));
+        console.log("\\W：" + reg.test("我"));
+        console.log("\\w：" + reg.test("我"));
+
+        reg = /\d/;
+        console.log("\\d：" + reg.test("123"));
+        console.log("\\d：" + reg.test("我"));
+
+        reg = /\D/;
+        console.log("\\D:" + reg.test("123"));
+        console.log("\\D:" + reg.test("我"));
+
+        reg = /\s/;
+        console.log("\\s：" + reg.test("123"));
+        console.log("\\s：" + reg.test("我 "));
+
+        reg = /\S/;
+        console.log("\\S:" + reg.test("123"));
+        console.log("\\S:" + reg.test("我 "));
+
+        /**
+         * 单词边界示例：
+         *   创建一个正则表达式检查一个字符串是否有单词child
+         */
+
+        reg = /\bchild\b/;
+        console.log(reg.test("hello child ren"));
+
+        //去掉字符串的空格
+        reg = /\s/g;
+        console.log("          hi        ");
+        console.log("          hi        ".replace(reg, ""));
+        //去掉前边的空格
+        reg = /^\s*/g;
+        console.log("去掉开头空格：" + "         hi       ".replace(""));
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

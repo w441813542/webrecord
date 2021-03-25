@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       var arr = ["孙悟空","露可娜娜","黄忠","吕布","凯"];
+       /**
+        * slice()
+        *  - 可以用来返回选定的元素
+        *  - 参数需要：
+        *     1.开始位置,包含开始索引
+        *     2.结束为止,包含结束索引
+        *         - 第二个参数可以省略不写
+        *     -索引可以传递一个附属，如果传递一个赋值，则从后往前计算
+        *       例如：  -1倒数第一个
+        *              -2倒数第二个
+        */ 
+       var newArr = arr.slice(1,3);
+       console.log(newArr);
+
+       var newArr1 = arr.slice(3);
+       console.log(newArr1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

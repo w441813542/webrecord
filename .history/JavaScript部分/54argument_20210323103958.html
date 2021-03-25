@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /**
+         * 再调用函数时，浏览器每次都会传递进两个隐含的参数，
+         *   1.函数的上下文this
+         *   2.封装实参的对象argument
+         *        - arguments 是一个“类数组对象”
+         *        - 在调用函数式，我们所传递的参数也会在arguments中保存
+         *             获取比较麻烦，第一个参数：arguments[0]、第二个参数：arguments[1]
+         * 
+         *        - 它里面的属性叫做callee.
+         *             这个属性对应一个函数对象，就是当前正在指向的函数的对象
+         */
+
+
+        //无论加不加形参，都会在arguments保存调用者传来的参数
+        function fun() {
+            console.log(arguments.length);
+        }
+ 
+        fun(1, 2, 3)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload = function () {
+            /**
+        * 浏览器在加载一个页面时，是按照自上而下的顺序加载的
+        *   读取到一行就运行一行，如果将script标签写到页面得上边，
+        *   在代码执行时，页面还没有加载
+        * 
+        *   将js代码编写到也免得下部就是为了，可以在页面加载完毕后在执行js代码
+        */
+
+            //获取id为btn的按钮
+            var btn = document.getElementById("btn");
+            //为按钮绑定一个单击响应函数
+            btn.onclick = function () {
+                alert("nihao");
+            }
+
+            /**
+             * onload事件会在整个页面完成加载后运行
+             */
+
+        }
+    </script>
+</head>
+
+<body>
+    <button id="btn">电我下</button>
+</body>
+
+</html>

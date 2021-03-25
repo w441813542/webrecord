@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    /**
+     * 检查一个字符串中是否含有.
+     * 需要用到转义字符\来转义
+     */ 
+    var reg = /\./;
+    console.log(reg.test("123"));
+
+    //判断有没有斜杠
+    reg = /\\/;
+    console.log(reg.test("123\\"));
+
+    //构造函数里面因为是字符串所以要写两个斜杠才能转义
+    reg = new RegExp("\\.");
+    console.log(reg.test("haha.ha"));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

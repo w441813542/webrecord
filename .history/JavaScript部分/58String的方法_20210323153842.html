@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = "hello hworld";
+        /**
+         * 在底层字符串是以字符数组的形式保存的
+         * ["h","e","l"...]
+         */
+
+        console.log(str.length);
+        console.log(str[0]);
+
+        /**
+         * charAt()
+         *   - 返回指定位置的字符
+         */
+        console.log(str);
+        console.log(str.charAt(0));
+        /**
+         * charCodeAt()
+         *   - 返回字符的编码
+         */
+        console.log(str.charCodeAt(0));
+        /**
+         * concat()
+         *   - 连接一个或多个字符串
+         */
+        console.log(str.concat(",", "i'm wzj！"));
+        /**
+         * indexOf()
+         * 检索字符串:
+         *   - 是否含有指定内容,如果有内容，则返回第一次出现的索引，没找到内容返回-1
+         *   - 第一个参数：指定内容
+         *   - 第二个参数：指定开始的位置。
+         */
+        console.log(str.indexOf("e"));
+        /**
+         * lastIndexOf(|)
+         *   从末尾开始检索字符串
+         *   其余都一样
+         *   
+         */
+        console.log(str.lastIndexOf("h",3));
+        /**
+         * slice()
+         *  - 可以从字符串中截取指定的内容
+         *  - 不影响原字符串
+         *  - 参数
+         *      1.开始位置索引，包括开始索引
+         *      2.结束位置索引，不包括结束位置，如果省略改参数，则截取后面所有字符串
+         *     - 也可以传递负数的参数，附属的话会从后边计算。
+         */ 
+        console.log("slice="+str.slice(0,2));
+
+        /**
+         * subString()
+         *   - 用来截取一个字符串，与slice()类似
+         *   - 参数：
+         *      1.开始位置索引，包括开始索引
+         *      2.结束位置索引，不包括结束位置，如果省略改参数，则截取后面所有字符串
+         *     - 与slice()不同的是，不可以传递负数
+         *       而且它会自动调整参数的位置，如果第一个大于第二个参数，则自动交换
+         */   
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
