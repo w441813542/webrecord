@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+
+            //点击按钮以后添加超链接
+            var btn01 = document.getElementsByTagName("btn01");
+            btn01.onclick = function () {
+                //创建一个li
+                var li = document.createElement("li");
+                li.innerHTML = "<a href='javascript:'>超链接3</a>":
+            }
+
+            /**
+             * 为每一个超链接的绑定一个单击响应函数
+             */ 
+            //获取所有的a
+            var allA = document.getElementsByTagName("a");
+            for(var i = 0 ; i < allA.length ; i++)
+            {
+                allA[i].onclick = function() {
+                    alert("相应超链接点击");
+                }
+            }
+        }
+    </script>
+    <style></style>
+</head>
+<body>
+    <button id="btn01"></button>
+    <ul id="ul">
+       <li><a href="javascript:">超链接1</a></li>
+       <li><a href="javascript:">超链接2</a></li>
+       <li><a href="javascript:">超链接3</a></li>
+    </ul>
+</body>
+</html>

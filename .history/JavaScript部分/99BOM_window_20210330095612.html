@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            /**
+              自己写一个确认框
+             */
+            // function amIHandsom() {
+            //     var result = window.confirm("are you handsom?")
+            //     if (result) {
+            //         alert("of course！");
+            //     }
+            //     else {
+            //         amIHandsom();
+            //     }
+            // }
+            // amIHandsom();
+
+            /**
+             * setInterval()
+             *  - 定时调用
+             *  - 可以将一个函数，每隔一段时间执行一次
+             *  - 参数
+             *     1.回调函数
+             *     2.每次调用间隔的时间
+             */ 
+            var count = document.getElementById("count");
+            var second = 58;
+            var min = 0;
+            window.setInterval(function () {
+                if (second >= 59) {
+                    second = 0;
+                    min++;
+                } else {
+                    second++;
+                }
+                count.innerHTML = min + "分" + second + "秒";
+            }, 1)
+        };
+
+    </script>
+</head>
+
+<body>
+    <h1 id="count">0分0秒</h1>
+</body>
+
+</html>

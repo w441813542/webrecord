@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            /**
+             * 点击按钮以后，修改box1大小
+             */
+            var box1 = document.getElementById("box1");
+
+            var btn01 = document.getElementById("btn01");
+            /**
+             * 注意，如果CSS的样式中含有-，
+             *      这种名称在JS中是不合法的比如background-color
+             *      需要将这种样式名修改为驼峰命名法，
+             *      去掉-，然后将-后的字母大写
+             */ 
+            btn01.onclick = function () {
+                box1.style.width = "300px";
+                box1.style.height = "250px";
+                box1.style.backgroundColor = "yellow";
+            }
+        }
+
+    </script>
+    <style>
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1"></div>
+    <button id="btn01">点我下</button>
+</body>
+
+</html>

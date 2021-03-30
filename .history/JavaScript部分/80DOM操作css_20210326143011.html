@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            /**
+             * 点击按钮以后，修改box1大小
+             */
+            var box1 = document.getElementById("box1");
+
+            var btn01 = document.getElementById("btn01");
+            /**
+             * 注意，如果CSS的样式中含有-，
+             *      这种名称在JS中是不合法的比如background-color
+             *      需要将这种样式名修改为驼峰命名法，
+             *      去掉-，然后将-后的字母大写
+             * 
+             * 我们通过style属性设置的样式都是内联样式
+             *    而内联样式有较高的优先级，所以通过js修改的属性立即生效
+             * 
+             * 但是如果在样式中写了!importtant，则此时样式会有最高的优先级，
+             *   及时通过js也不能覆盖样式，此时会导致JS修改样式失败。
+             *   所以尽量不要样式添加!important
+             * 
+             * 
+             */
+            btn01.onclick = function () {
+                box1.style.width = "300px";
+                box1.style.height = "250px";
+                box1.style.backgroundColor = "yellow";
+            }
+            /**
+             * 通过style属性读取到的设置和读取的都是内联样式
+             *   无法读取样式表（css）中的样式
+             */
+            btn02.onclick = function () {
+                alert(box1.style.width);
+            }
+        }
+
+    </script>
+    <style>
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1"></div>
+    <button id="btn01">点我下</button>
+    <button id="btn02">获取样式</button>
+</body>
+
+</html>

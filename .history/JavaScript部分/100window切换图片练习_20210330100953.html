@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            /**
+             * 动态切换图片功能
+             *   (使用计时器功能)
+             */ 
+            var picArr = ["img/0.jpg", "img/1.jpg", "img/2.png", "img/3.jpg"];
+            var img = document.getElementById("img");
+            var index = 0;
+
+            setInterval(() => {
+                index = index % picArr.length;
+                img.src = picArr[index];
+            }, 1000);
+        }
+    </script>
+    <style>
+        #img {
+            width: auto;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/0.jpg" id="img" />
+</body>
+
+</html>

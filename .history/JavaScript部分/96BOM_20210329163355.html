@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+         * 浏览器对象模型（BOM)
+         *  - BOM可以使我们通过JS来操作浏览器
+         *  - 在BOM中为我们提供了一组对象，用来完成对浏览器的操作
+         *  - BOM对象
+         *       Window
+         *         - 代表的是真个浏览器的窗口，同时window也是网页中的全局对象
+         *       Navigator
+         *         - 代表的当前浏览器的信息，通过该对象可以来识别不同的浏览器
+         *       Location
+         *         - 代表的是当前浏览器的地址栏信息
+         *       History
+         *         - 代表的是当前浏览器的历史记录，可以通过该对象来操作浏览器历史记录
+         *         - 由于历史原因，Navigator对象中的大部分属性都已经不能帮助我们识别浏览器了
+         *       Screen 
+         *         - 代表用户的屏幕的信息，通过该对象可以获取到用户的显示器的相关信息。
+         *         - 由于隐私的原因，该对象不能获取到具体的历史记录，只能操作浏览器向前或向后翻页
+         *            而且该操作只在档次访问时有效
+         * 
+         *     这些BOM对象在浏览器中都是作为window对象的属性保存到
+         *        可以通过window对象来使用，也可以直接使用
+         *   
+         *     Navigator的UserAgent属性不同浏览器返回：
+         *     chrome：Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36
+         *     firefox：Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20100101 Firefox/87.0
+         *          IE:Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; rv:11.0) like Gecko
+         */ 
+        window.onload = function () {
+            var ua = navigator.userAgent;
+           if(/Firefox/i.test(ua))
+           {
+               alert("火狐！");
+           }
+           else if(/chrome/i.test(ua))
+           {
+               alert("CHROME！");
+           }else if(window.ActiveXObject){
+               alert("IE");
+           }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

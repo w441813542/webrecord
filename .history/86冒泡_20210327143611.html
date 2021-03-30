@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: wheat;
+        }
+
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+        }
+
+        #s1 {
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            /**
+             * 事件的冒泡（Bubble）
+             *  - 所谓的冒泡指的就是就是事件的向上传导，当后代元素上的事件被触发时，其祖先的元素上的【相同】事件也会被触发。
+             *  - 在我们的开发中，大部分情况冒泡都是有用的。如果不希望事件冒泡，可以通过事件对象来取消冒泡
+             *  - 
+             * 
+             */ 
+            //为S1绑定一个单击响应函数
+            var s1 = document.getElementById("s1");
+            s1.onclick = function (event) {
+                event = event || window.event;
+                event.cancelBubble;
+                alert("s1单击");
+            }
+            //为box1绑定一个单击响应函数
+            var box1 = document.getElementById("box1");
+            box1.onclick = function () {
+                alert("box1单击");
+            }
+            document.body.onclick = function () {
+                alert("body单击");
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="box1">
+        我是box1
+        <span id="s1">我是span</span>
+    </div>
+</body>
+
+</html>

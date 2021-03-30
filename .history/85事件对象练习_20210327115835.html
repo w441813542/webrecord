@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box2 {
+            height: 2000px;
+            overflow: scroll;
+        }
+
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /**
+               开启box1的绝对定位
+            */
+            position: absolute;
+        }
+    </style>
+    <script>
+        /**
+         * 使div随着鼠标移动
+         */
+        window.onload = function () {
+            var box1 = document.getElementById("box1");
+            document.onmousemove = function (event) {
+                event = event || window.event;
+                var left = event.clientX;
+                var top = event.clientY;
+                /**
+                 * chrome认为浏览器的滚动条是body的，可以通过body.scrolltop来获取
+                 * 火狐等浏览器认为浏览器的滚动条时html的。
+                 */
+                var st = document.body.scrollTop || document.documentElement.scrollTop;
+                //pageX和pageY可以获取鼠标对于当前页面的坐标(IE8不支持，需要兼容就不要用)
+                // var left = event.pageX;
+                // var top = event.pageY;
+
+                box1.style.left = left - 50;
+                box1.style.top = top - 50 + st;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="box2">
+        <div id="box1"></div>
+    </div>
+</body>
+
+</html>

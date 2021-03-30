@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            /**
+              自己写一个确认框
+             */
+            // function amIHandsom() {
+            //     var result = window.confirm("are you handsom?")
+            //     if (result) {
+            //         alert("of course！");
+            //     }
+            //     else {
+            //         amIHandsom();
+            //     }
+            // }
+            // amIHandsom();
+            var second = document.getElementById("count");
+            var min = 
+            window.setInterval(function () {
+                if(+second.innerHTML >= 60)
+                {
+                    second.innerHTML = 0;
+
+                }
+                second.innerHTML = +second.innerHTML +1;
+            }, 1000)
+        };
+
+    </script>
+</head>
+
+<body>
+    <h1 id="count">1</h1>
+</body>
+
+</html>

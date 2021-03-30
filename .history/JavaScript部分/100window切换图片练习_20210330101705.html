@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            /**
+             * 动态切换图片功能
+             *   (使用计时器功能)
+             */
+            var picArr = ["img/0.jpg", "img/1.jpg", "img/2.png", "img/3.jpg"];
+            var img = document.getElementById("img");
+            var index = 0;
+            var startBtn = document.getElementById("btn01");
+            var finishBtn = document.getElementById("btn02");
+            var timer;
+
+            startBtn.onclick = function () {
+                if (!timer) {
+                    timer = setInterval(() => {
+                        index++;
+                        index = index % picArr.length;
+                        img.src = picArr[index];
+                    }, 500);
+                }
+            }
+
+            finishBtn.onclick = function () {
+                clearInterval(timer);
+                timer = null;
+            }
+
+        }
+    </script>
+    <style>
+        #img {
+            width: auto;
+            height: 200px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/0.jpg" id="img" />
+    <button id="btn01">开始</button>
+    <button id="btn02">结束</button>
+</body>
+
+</html>
