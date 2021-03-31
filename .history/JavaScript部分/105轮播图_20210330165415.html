@@ -1,0 +1,144 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #outer {
+            width: 520px;
+            height: 333px;
+            /*居中*/
+            margin: 50px auto;
+            background-color: yellowgreen;
+            /*设置padding*/
+            padding: 10px 0;
+            position: relative;
+            /*裁剪溢出内容*/
+            overflow: hidden;
+        }
+
+        img {
+            width: 500px;
+            height: 333px;
+        }
+
+        #imgList {
+            width: 2100px;
+            list-style: none;
+            position: absolute;
+            /*每增加520px就会新增一个图片*/
+            left: 0px;
+        }
+
+        li {
+            float: left;
+            margin: 0 10px;
+        }
+
+        #navDiv {
+            position: absolute;
+            /*设置位置*/
+            bottom: 10px;
+        }
+
+        /*设置导航按钮*/
+        #navDiv a {
+            width: 20px;
+            height: 20px;
+            float: left;
+            background-color: red;
+            margin: 0 5px;
+            /*设置透明*/
+            opacity: 0.5;
+        }
+
+        #navDiv a:hover {
+            background-color: black;
+            opacity: 0.5;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            //设置imgList宽度
+            var imgList = document.getElementById("imgList");
+            var navDiv = document.getElementById("navDiv");
+            var outer = document.getElementById("outer");
+            //获取所有的a
+            var allA = document.getElementsByTagName("a");
+            var index = 0;
+
+            //获取页面中所有图片
+            var imgArr = document.getElementsByTagName("li");
+            //动态设置imgList宽度
+            imgList.style.width = 520 * imgArr.length + "px";
+            //设置left值
+            navDiv.style.left = (outer.offsetWidth - navDiv.offsetWidth) / 2;
+            //设置默认选中效果
+            allA[index].style.backgroundColor = "black";
+
+
+            /**
+             * 点击超链接切换图片
+             *   点击第一个超链接，显示第一个图片，如此类推
+             */
+            //为所有的超链接都绑定点击事件
+            for (var i = 0; i < allA.length; i++) {
+                allA[i].num = i;
+                allA[i].onclick = function () {
+                    //获取点击超链接的索引
+                    index = this.num;
+                    move();
+                    allA[index].style.backgroundColor = "black";
+                }
+            }
+
+            function move() {
+                //切换图片
+                imgList.style.left = -index * 520 + "px";
+            }
+
+            //创建一个方法来设置选中的a
+            function setA() {
+                for(var i = 0 ; i < allA.length;i++)
+                {
+                    allA[i].style.backgroundColor = "red"
+                }
+            }
+
+            function swithInTime() {
+                
+            }
+
+        
+        }
+    </script>
+</head>
+
+<body>
+    <div id="outer">
+        <ul id="imgList">
+            <li><img src="img/0.jpg"></li>
+            <li><img src="img/1.jpg"></li>
+            <li><img src="img/2.png"></li>
+            <li><img src="img/3.jpg"></li>
+            <li><img src="img/3.jpg"></li>
+        </ul>
+        <!--创建导航div-->
+        <div id="navDiv">
+            <a href="javascript:"></a>
+            <a href="javascript:"></a>
+            <a href="javascript:"></a>
+            <a href="javascript:"></a>
+            <a href="javascript:"></a>
+        </div>
+    </div>
+</body>
+
+</html>

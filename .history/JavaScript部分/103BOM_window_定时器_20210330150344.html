@@ -19,7 +19,6 @@
             padding: 0;
         }
     </style>
-    <script src="js/tool.js"></script>
     <script>
         window.onload = function () {
             var box1 = document.getElementById("box1");
@@ -27,17 +26,41 @@
             var btn02 = document.getElementById("btn02");
             var timer;
             btn01.onclick = function () {
-                move(box1, "right", 800, 10, function () {
-
-                });
+                move("right");
             }
             btn02.onclick = function () {
-                move(box1, "left", 0, 10, function () {
+                move("left");
+            }
 
-                });
+            function move(derection) {
+                //默认为右边
+                var newValue = 0;
+                var derectionInt = 1;
+                var broundary = 800;
+                var condition = newValue < broundary;
+                if (timer) {
+                    clearInterval(timer);
+                    timer = null;
+                }
+                if (derection == "left") {
+                    derectionInt = -1
+                    broundary = 0;
+                    condition = newValue > broundary;
+                } else {
+                    derectionInt = 1;
+                    broundary = 800;
+                    condition = newValue < broundary;
+                }
+                timer = setInterval(() => {
+                    newValue = parseInt(getStyle(box1, "left"));
+                    if (condition) {
+                        box1.style.left = parseInt(getStyle(box1, "left")) + derectionInt;
+                    } else {
+                        clearInterval(timer);
+                    }
+                }, 5);
             }
         }
-
 
 
 
